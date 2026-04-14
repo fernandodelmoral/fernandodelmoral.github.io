@@ -1,1 +1,18 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // Detector de idioma
+        var userLang = navigator.language || navigator.userLanguage; 
+        if (userLang.startsWith('en')) {
+            window.location.href = "./en/";
+        } else {
+            window.location.href = "./es/";
+        }
+    </script>
+    <title>Redirecting...</title>
+</head>
+<body>
+    <p>Redireccionando... / Redirecting...</p>
+</body>
+</html>
