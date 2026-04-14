@@ -1,0 +1,11 @@
+body { font-family: 'Inter', -apple-system, sans-serif; line-height: 1.6; color: #e0e0e0; background: #121212; max-width: 900px; margin: auto; padding: 2em; }
+.card { background: #1e1e1e; padding: 40px; border-radius: 12px; border: 1px solid #333; }
+h1 { color: #fff; margin-bottom: 0.2em; }
+.subtitle { color: #888; font-size: 1.2em; margin-bottom: 2em; }
+.tag { background: #333; color: #00d4ff; padding: 4px 12px; border-radius: 20px; font-size: 0.85em; margin-right: 8px; border: 1px solid #444; }
+.btn-ws { display: inline-block; background: #25d366; color: #000; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 20px; transition: 0.3s; }
+.btn-ws:hover { background: #1da851; transform: translateY(-2px); }
+.lang-switch { text-align: right; margin-bottom: 10px; font-size: 0.9em; }
+.lang-switch a { color: #00d4ff; text-decoration: none; margin-left: 15px; }
+hr { border: 0; border-top: 1px solid #333; margin: 30px 0; }
+.demo-box { background: #000; padding: 20px; border-radius: 8px; text-align: center; color: #555; border: 1px dashed #444; }
