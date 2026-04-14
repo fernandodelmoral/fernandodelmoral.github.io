@@ -1,11 +1,127 @@
-body { font-family: 'Inter', -apple-system, sans-serif; line-height: 1.6; color: #e0e0e0; background: #121212; max-width: 900px; margin: auto; padding: 2em; }
-.card { background: #1e1e1e; padding: 40px; border-radius: 12px; border: 1px solid #333; }
-h1 { color: #fff; margin-bottom: 0.2em; }
-.subtitle { color: #888; font-size: 1.2em; margin-bottom: 2em; }
-.tag { background: #333; color: #00d4ff; padding: 4px 12px; border-radius: 20px; font-size: 0.85em; margin-right: 8px; border: 1px solid #444; }
-.btn-ws { display: inline-block; background: #25d366; color: #000; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 20px; transition: 0.3s; }
-.btn-ws:hover { background: #1da851; transform: translateY(-2px); }
-.lang-switch { text-align: right; margin-bottom: 10px; font-size: 0.9em; }
-.lang-switch a { color: #00d4ff; text-decoration: none; margin-left: 15px; }
-hr { border: 0; border-top: 1px solid #333; margin: 30px 0; }
-.demo-box { background: #000; padding: 20px; border-radius: 8px; text-align: center; color: #555; border: 1px dashed #444; }
+* {
+    box-sizing: border-box; /* Evita que el padding desborde el ancho en móviles */
+}
+
+body { 
+    font-family: 'Inter', -apple-system, sans-serif; 
+    line-height: 1.6; 
+    color: #e0e0e0; 
+    background: #121212; 
+    max-width: 900px; 
+    margin: auto; 
+    padding: 1.5em; /* Reducido para mejor aprovechamiento en móvil */
+}
+
+/* Contenedor Principal */
+.card { 
+    background: #1e1e1e; 
+    padding: 30px; 
+    border-radius: 12px; 
+    border: 1px solid #333; 
+    width: 100%;
+}
+
+/* Tipografía */
+h1 { 
+    color: #fff; 
+    margin-bottom: 0.2em; 
+    line-height: 1.2;
+}
+
+.subtitle { 
+    color: #888; 
+    font-size: 1.1em; 
+    margin-bottom: 2em; 
+}
+
+/* Etiquetas/Tags */
+.tag { 
+    display: inline-block; /* Permite que bajen de línea si no caben */
+    background: #333; 
+    color: #00d4ff; 
+    padding: 4px 12px; 
+    border-radius: 20px; 
+    font-size: 0.8em; 
+    margin-right: 5px; 
+    margin-bottom: 8px; 
+    border: 1px solid #444; 
+}
+
+/* Botón de WhatsApp */
+.btn-ws { 
+    display: inline-block; 
+    background: #25d366; 
+    color: #000; 
+    padding: 14px 28px; 
+    text-decoration: none; 
+    border-radius: 6px; 
+    font-weight: bold; 
+    margin-top: 20px; 
+    transition: 0.3s; 
+    text-align: center;
+}
+
+.btn-ws:hover { 
+    background: #1da851; 
+    transform: translateY(-2px); 
+}
+
+/* Selector de Idiomas */
+.lang-switch { 
+    text-align: right; 
+    margin-bottom: 15px; 
+    font-size: 0.9em; 
+}
+
+.lang-switch a { 
+    color: #00d4ff; 
+    text-decoration: none; 
+    margin-left: 15px; 
+    font-weight: 500;
+}
+
+/* Separadores y Demos */
+hr { 
+    border: 0; 
+    border-top: 1px solid #333; 
+    margin: 25px 0; 
+}
+
+.demo-box { 
+    background: #000; 
+    padding: 20px; 
+    border-radius: 8px; 
+    text-align: center; 
+    color: #666; 
+    border: 1px dashed #444; 
+    margin: 20px 0;
+}
+
+/* --- MEDIA QUERIES PARA DISPOSITIVOS MÓVILES --- */
+@media (max-width: 600px) {
+    body {
+        padding: 1em; /* Menos margen en los bordes físicos del teléfono */
+    }
+
+    .card {
+        padding: 20px; /* Menos aire interno para ganar espacio para el texto */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Título un poco más pequeño para evitar cortes */
+    }
+
+    .subtitle {
+        font-size: 1em;
+    }
+
+    .btn-ws {
+        display: block; /* El botón ocupa todo el ancho: más fácil de tocar con el pulgar */
+        width: 100%;
+    }
+    
+    .lang-switch {
+        text-align: center; /* Centrado en móviles para mejor acceso visual */
+        margin-top: 10px;
+    }
+}
