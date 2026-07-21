@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fernando Del Moral | Systems Engineer & Algorithmic Trading</title>
     
-    <!-- Script de detección automática de idioma -->
+    <!-- Script de detección automática de idioma con memoria de sesión para evitar bucles -->
     <script>
-        const userLang = navigator.language || navigator.userLanguage;
-        if (userLang.startsWith('es') && !window.location.pathname.includes('/es/')) {
-            window.location.replace('/es/');
+        if (!sessionStorage.getItem('manual_override')) {
+            const userLang = navigator.language || navigator.userLanguage;
+            if (userLang.startsWith('es') && !window.location.pathname.includes('/es/')) {
+                window.location.replace('/es/');
+            }
         }
     </script>
 
@@ -27,7 +29,7 @@
 </head>
 <body>
     <div class="lang-switch">
-        <span>[ EN </span> | <a href="es/index.html">ES ]</a>
+        <span>[ EN </span> | <a href="es/index.html" onclick="sessionStorage.setItem('manual_override', 'true');">ES ]</a>
     </div>
 
     <h1>Fernando Del Moral</h1>
