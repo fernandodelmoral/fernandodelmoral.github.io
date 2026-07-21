@@ -2,63 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fernando Del Moral | Systems Engineer & Algorithmic Trading</title>
-    
-    <!-- Script de detección automática con memoria de sesión -->
+    <title>Fernando Del Moral</title>
     <script>
-        // Si el usuario eligió manualmente ver en inglés o ya está navegando en inglés, no forzar redirección
-        if (!sessionStorage.getItem('manual_override')) {
-            const userLang = navigator.language || navigator.userLanguage;
-            if (userLang.startsWith('es') && !window.location.pathname.includes('/es/')) {
-                window.location.replace('/es/');
-            }
+        // Detecta el idioma del navegador
+        const userLang = navigator.language || navigator.userLanguage;
+        
+        // Si es español, va a /es/, de lo contrario entra por defecto a /en/
+        if (userLang.startsWith('es')) {
+            window.location.replace('/es/');
+        } else {
+            window.location.replace('/en/');
         }
     </script>
-
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0d1117; color: #c9d1d9; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6; }
-        h1 { color: #f0f6fc; }
-        a { color: #58a6ff; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .badge { display: inline-block; background: #21262d; border: 1px solid #30363d; padding: 4px 10px; border-radius: 6px; font-size: 14px; margin-right: 6px; margin-bottom: 10px; color: #8b949e; }
-        .project-card { background: #161b22; border: 1px solid #30363d; padding: 20px; border-radius: 8px; margin-top: 20px; }
-        .lang-switch { text-align: right; font-size: 14px; margin-bottom: 20px; font-weight: bold; }
-        .btn { display: inline-block; background: #238636; color: #fff; padding: 10px 20px; border-radius: 6px; font-weight: bold; margin-top: 15px; }
-        .btn:hover { background: #2ea043; text-decoration: none; }
-    </style>
 </head>
 <body>
-    <div class="lang-switch">
-        <span>[ EN </span> | <a href="es/index.html" onclick="sessionStorage.setItem('manual_override', 'true');">ES ]</a>
-    </div>
-
-    <h1>Fernando Del Moral</h1>
-    <p><strong>Systems Engineer | Process Automation | Algorithmic Trading Infrastructure</strong></p>
-
-    <div>
-        <span class="badge">Systems Engineering</span>
-        <span class="badge">Python Backend</span>
-        <span class="badge">MQL5 / MetaTrader</span>
-        <span class="badge">DRM Security</span>
-    </div>
-
-    <p>Passionate Systems Engineer focused on bridging the gap between complex software architecture and algorithmic trading systems. I specialize in designing robust backend solutions, workflow automations, and secure integration gateways.</p>
-
-    <div class="project-card">
-        <h3>Featured Project: MQL5 & Python License Gateway</h3>
-        <p>An enterprise-grade software licensing and DRM system designed to protect MetaTrader 5 Expert Advisors (EAs) intellectual property using a secure Python web backend.</p>
-        <ul>
-            <li><strong>The Problem:</strong> Standard MQL5 compiled code is vulnerable to unauthorized distribution.</li>
-            <li><strong>Architecture:</strong> Python/Flask REST API database gateway with SQLite3/MySQL, integrated with high-performance MQL5 clients via secure WebRequest authentication.</li>
-            <li><strong>Key Features:</strong> Dual-currency Economic Calendar filters, strict technical bilingual comments, and multi-timeframe obstacle detection.</li>
-        </ul>
-        <a href="https://github.com/fernandodelmoral" class="btn" target="_blank">View GitHub Repository</a>
-    </div>
-
-    <p style="margin-top: 40px; font-size: 14px; color: #8b949e;">
-        Contact: <a href="mailto:delmoral.systems@gmail.com">delmoral.systems@gmail.com</a> | 
-        <a href="https://linkedin.com/in/your-username" target="_blank">LinkedIn</a>
-    </p>
+    <p>Loading...</p>
 </body>
 </html>
