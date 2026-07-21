@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fernando Del Moral | Systems Engineer & Algorithmic Trading</title>
     
-    <!-- Script de detección automática de idioma con memoria de sesión para evitar bucles -->
+    <!-- Script de detección automática con memoria de sesión -->
     <script>
+        // Si el usuario eligió manualmente ver en inglés o ya está navegando en inglés, no forzar redirección
         if (!sessionStorage.getItem('manual_override')) {
             const userLang = navigator.language || navigator.userLanguage;
             if (userLang.startsWith('es') && !window.location.pathname.includes('/es/')) {
